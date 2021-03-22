@@ -1,0 +1,66 @@
+ul {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+/*ion-toolbar.toolbar-background {
+  --background-color: green;
+}*/
+
+ion-title {
+  font-size: 2rem;
+  font-weight: 600;
+  text-align: center;
+  color: var(--ion-color-success); 
+}
+
+
+ion-toolbar {
+  --background: rgba(var(--ion-color-light-rgb), 0.5);
+}
+
+ion-content {
+ /* --background: url("../../assets/images/background.jpg") 0 0/100% 100% no-repeat;
+  opacity: 0.3;*/
+  --padding-start: 0;
+  --padding-end: 0;
+  --padding-top: 0;
+  --padding-bottom: 0;
+}
+
+ion-img {
+  position: absolute;
+  opacity: 0.2;
+}
+
+ion-grid {
+  --ion-grid-padding: 20px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.questions {
+  flex: 1;
+}
+
+.description {
+  font-size: 1.4rem;
+  display: flex;
+}
+
+.send-button {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  ion-button {
+    --color: var(--ion-color-light);
+  }
+}
+

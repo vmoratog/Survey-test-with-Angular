@@ -1,0 +1,20 @@
+<ion-card>
+  <span class="question">{{ data.question }}</span>
+  <div>
+    <ul>
+      <ion-button
+        expand="block"
+        fill="outline"
+        *ngFor="let a of data.answers; trackBy: trackByAnswer"
+        (click)="onClick(a)">
+        <li>
+          <div class="option">
+            <div class="label-option"><span>{{ a.id }}.</span></div>
+            <ion-label>{{ a.answer }}</ion-label>
+          </div>
+          <ion-checkbox [checked]="a.isSelected" slot="end"></ion-checkbox>
+        </li>
+      </ion-button>
+    </ul>
+  </div>
+</ion-card>

@@ -2,6 +2,10 @@ ion-menu-button {
   color: var(--ion-color-primary);
 }
 
+ion-content {
+  --background: rgba(var(--ion-color-tertiary-rgb), 0.5);
+}
+
 #container {
   text-align: center;
   position: absolute;
@@ -26,3 +30,30 @@ ion-menu-button {
 #container a {
   text-decoration: none;
 }
+
+.wrapper-img {
+  padding: 2rem 5rem;
+  max-width: 100%;
+  object-fit: cover;
+  opacity: 0;
+}
+
+ion-img {
+  height: 20rem;
+}
+
+p{
+  padding: 0 5rem;
+  font-size: 1.4rem;
+  color: var(--ion-color-primary)
+}
+
+ion-title {
+  font-size: 2rem;
+  font-weight: 600;
+  text-align: center;
+  color: var(--ion-color-success);
+  margin-top: 2rem; 
+}
+
+

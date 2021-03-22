@@ -4,13 +4,19 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'folder/Inbox',
+    redirectTo: 'survey',
     pathMatch: 'full'
   },
   {
-    path: 'folder/:id',
-    loadChildren: () => import('./folder/folder.module').then( m => m.FolderPageModule)
+    path: 'survey',
+    loadChildren: () => import('./survey/survey.module').then(m => m.SurveyPageModule)
+  },
+  {
+    path: ':id',
+    loadChildren: () => import('./folder/folder.module').then(m => m.FolderPageModule)
   }
+
+
 ];
 
 @NgModule({
@@ -19,4 +25,4 @@ const routes: Routes = [
   ],
   exports: [RouterModule]
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }

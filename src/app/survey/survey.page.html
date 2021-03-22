@@ -1,0 +1,41 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-title>Test de personalidad y Estilos de aprendizaje</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content scrollY="false" class="ion-padding">
+  <ion-img src="../../assets/images/background.jpg"></ion-img>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-text
+          class="description ion-padding">
+          Un estilo de aprendizaje consiste en una serie de características
+          personales con las que naces y que desarrollas conforme vas creciendo.
+          Determina, entre otras cosas, a través de qué actividades y sentidos
+          tiendes a absorber información más fácilmente!
+        </ion-text>
+        <ion-text
+          class="description ion-padding">
+          Responde estas 9 preguntas y te daremos el resultado de tu tipo de
+          personalidad. ¡Ahora sabrás tu forma de comunicartecon los demás!
+        </ion-text>
+      </ion-col>
+    </ion-row>
+    <ion-row class="questions ion-justify-content-center">
+      <ion-col class="ion-align-self-center">
+        <question-card
+          class="question-card"
+          *ngFor="let q of questions; trackBy: trackByQuestion"
+          [data]="q"
+          style="display: none;"
+          (selectAnswerEvent)="selectAnswer($event)">
+        </question-card>
+        <div class="send-button" style="display: none;">
+          <ion-button (click)="getScore()">Descubre tu personalidad!</ion-button>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
